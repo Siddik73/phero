@@ -1,5 +1,15 @@
 # 🚀 Brutalist "Cosmic Orange" AI-Driven Developer Portfolio (2026 Edition)
 
+```yaml
+Project Codename  : VIBE COADING ( ANTIGRAVITY, Google AI Studio)
+Client            : Alex Rivera (AI-Driven Full-Stack Web Engineer)
+Edition           : 2026
+Design Philosophy : Brutalist · Retro-Industrial · Grid-Aligned
+Primary Stack     : React 19 · Vite 6 · Tailwind v4 · TypeScript
+Prompt Framework  : ANTIGRAVITY Methodology
+Status            : Production-Ready ✅
+```
+
 An ultra-modern, high-performance, single-page portfolio application built for an elite foreign client (**Alex Rivera (AI-Driven Full-Stack Web Engineer)**). Centered around a gorgeous brutalist, retro-industrial, and grid-aligned design system utilizing **charcoal-slate backgrounds** and **high-contrast cosmic orange accenting (`#F27D26`)**.
 
 This project showcases a complete shift in 2026 development workflows: high-performance prompting, responsive container states, standalone client-side simulators, and meticulous visual craftsmanship.
@@ -26,12 +36,15 @@ This portfolio is packed with rich, highly polished components that are styled w
    - A dual-pane contact terminal. The left side handles fully validated message collection.
    - The right side features a real-time reactive **Local State Sandbox Terminal** that logs connection payloads and stream parameters as they propagate.
 
-5. **⚡ Cutting-Edge Tech Stack**
-   - **React 19 + TypeScript**: Advanced hook cycles, structured static data management, and stable rendering loops.
-   - **Vite 6**: Hyper-fast module resolution and lightweight production asset builds.
-   - **Tailwind CSS v4**: Ground up utility styling for responsive mobile touch-targets and premium desktop desktop layout alignments.
-   - **Motion (Framer Motion)**: Dynamic stagger animations, elegant modal fade-ins, and adaptive transitions.
-   - **Lucide Icons**: Beautiful native vector shapes, cleanly sizing and scaling across device dimensions.
+5. **⚡ Tech Stack**
+
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| Framework | React 19 + TypeScript | Advanced hook cycles, static data management, stable rendering |
+| Build Tool | Vite 6 | Hyper-fast module resolution, lightweight production builds |
+| Styling | Tailwind CSS v4 | Responsive utility-first layout, mobile touch targets, desktop precision |
+| Animation | Motion (Framer Motion) | Stagger animations, modal fade-ins, adaptive transitions |
+| Icons | Lucide Icons | Clean vector shapes scaling gracefully across all viewports |
 
 ---
 
