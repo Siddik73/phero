@@ -71,9 +71,9 @@ EDUCATION:
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b0f10]/85 backdrop-blur-md p-4 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4 overflow-y-auto">
       {/* Modal Card */}
-      <div className="relative bg-[#191c1e] border border-[#272a2c] w-full max-w-5xl rounded-xl shadow-2xl flex flex-col lg:flex-row max-h-[90vh] overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="relative bg-[#191c1e]/90 backdrop-blur-lg border border-[#272a2c] w-full max-w-5xl rounded-xl shadow-2xl flex flex-col lg:flex-row max-h-[90vh] overflow-hidden animate-in zoom-in-95 duration-200">
         
         {/* Style block for printing Resume strictly as a gorgeous single page, hiding controls */}
         <style dangerouslySetInnerHTML={{__html: `
@@ -119,7 +119,7 @@ EDUCATION:
         `}} />
 
         {/* Sidebar Controls - Lefthand Column */}
-        <div className="w-full lg:w-80 bg-[#0A0A0A] border-r border-[#333] p-6 lg:p-8 flex flex-col justify-between overflow-y-auto">
+        <div className="w-full lg:w-80 bg-black/40 backdrop-blur-md border-r border-[#333] p-6 lg:p-8 flex flex-col justify-between overflow-y-auto">
           <div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">

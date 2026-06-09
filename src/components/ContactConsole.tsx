@@ -79,7 +79,7 @@ export default function ContactConsole() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
       {/* Righthand: Validated Entry Form */}
-      <div className="bg-[#121212] border border-[#333] rounded-none p-6 sm:p-8 flex flex-col justify-between">
+      <div className="bg-[#121212]/30 backdrop-blur-md border border-[#333] rounded-none p-6 sm:p-8 flex flex-col justify-between z-10 relative">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-1.5 border-b border-[#333] pb-4">
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#F27D26] font-bold">
@@ -198,7 +198,7 @@ export default function ContactConsole() {
       </div>
 
       {/* Lefthand: Recruiter Console Sandbox message log */}
-      <div className="bg-[#0A0A0A] border border-[#333] rounded-none p-5 flex flex-col justify-between overflow-hidden h-[540px]">
+      <div className="bg-[#0A0A0A]/30 backdrop-blur-md border border-[#333] rounded-none p-5 flex flex-col justify-between overflow-hidden h-[540px] z-10 relative">
         <div>
           <div className="flex items-center justify-between border-b border-[#333] pb-3 mb-4">
             <div className="flex items-center gap-2">
@@ -227,7 +227,7 @@ export default function ContactConsole() {
           {/* Messages list loops */}
           <div className="space-y-3 overflow-y-auto max-h-[380px] pr-1">
             {messageLogs.length === 0 ? (
-              <div className="p-8 text-center bg-[#121212] rounded-none border border-[#333] border-dashed">
+              <div className="p-8 text-center bg-[#121212]/50 rounded-none border border-[#333] border-dashed">
                 <HelpCircle className="w-8 h-8 text-[#666] mx-auto mb-2" />
                 <p className="text-xs text-[#AAAAAA] italic">Inbound log registry is empty. Type a test message on the left to see schemas populate live!</p>
               </div>
@@ -235,10 +235,10 @@ export default function ContactConsole() {
               messageLogs.map((msg, i) => (
                 <div 
                   key={msg.id} 
-                  className={`border rounded-none p-3.5 space-y-2 transition-all ${
+                  className={`border rounded-none p-3.5 space-y-2 transition-all backdrop-blur-sm ${
                     i === 0 
-                      ? "bg-[#121212] border-[#F27D26]/60 shadow-sm shadow-[#F27D26]/5 animate-in zoom-in-95" 
-                      : "bg-[#121212]/50 border-[#333]"
+                      ? "bg-[#121212]/70 border-[#F27D26]/60 shadow-sm shadow-[#F27D26]/5 animate-in zoom-in-95" 
+                      : "bg-[#121212]/30 border-[#333]"
                   }`}
                 >
                   <div className="flex justify-between items-start">

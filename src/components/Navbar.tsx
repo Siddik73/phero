@@ -48,7 +48,7 @@ export default function Navbar({ onOpenResume, activeSection }: NavbarProps) {
       id="nav-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-[#333] py-4"
+          ? "bg-black/80 backdrop-blur-md border-b border-[#333] py-4"
           : "bg-transparent py-6"
       }`}
     >
@@ -72,7 +72,7 @@ export default function Navbar({ onOpenResume, activeSection }: NavbarProps) {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 bg-[#121212]/85 px-3 py-1.5 rounded border border-[#333]">
+        <nav className="hidden lg:flex items-center gap-1 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-[#333]">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeSection === item.id;
@@ -97,7 +97,7 @@ export default function Navbar({ onOpenResume, activeSection }: NavbarProps) {
         <div className="hidden lg:flex items-center gap-4">
           <button
             onClick={onOpenResume}
-            className="flex items-center gap-2 px-4 py-2 rounded border border-[#333] bg-[#121212] text-[10px] font-bold uppercase tracking-widest hover:bg-[#1E1E1E] text-[#AAAAAA] hover:text-white transition-all hover:border-[#F27D26]/40"
+            className="flex items-center gap-2 px-4 py-2 rounded border border-[#333] bg-[#121212]/50 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest hover:bg-[#1E1E1E]/50 text-[#AAAAAA] hover:text-white transition-all hover:border-[#F27D26]/40"
           >
             <FileText className="w-3.5 h-3.5 text-[#F27D26]" />
             Resume [PDF]
@@ -115,14 +115,14 @@ export default function Navbar({ onOpenResume, activeSection }: NavbarProps) {
         <div className="flex lg:hidden items-center gap-2">
           <button
             onClick={onOpenResume}
-            className="p-2 rounded border border-[#333] bg-[#121212] text-xs font-semibold text-[#F5F5F5] hover:text-white transition-all"
+            className="p-2 rounded border border-[#333] bg-[#121212]/50 backdrop-blur-md text-xs font-semibold text-[#F5F5F5] hover:text-white transition-all"
             title="Resume Builder"
           >
             <FileText className="w-4 h-4 text-[#F27D26]" />
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded border border-[#333] bg-[#121212] text-[#AAAAAA] hover:text-white transition-colors"
+            className="p-2 rounded border border-[#333] bg-[#121212]/50 backdrop-blur-md text-[#AAAAAA] hover:text-white transition-colors"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -131,7 +131,7 @@ export default function Navbar({ onOpenResume, activeSection }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-[73px] left-0 right-0 bg-[#0A0A0A] border-b border-[#333] px-6 py-6 flex flex-col gap-4 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden absolute top-[73px] left-0 right-0 bg-black/95 backdrop-blur-lg border-b border-[#333] px-6 py-6 flex flex-col gap-4 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
           <p className="text-[9px] font-mono text-[#666] tracking-[0.3em] uppercase border-b border-[#333] pb-1">
             Section Navigation
           </p>

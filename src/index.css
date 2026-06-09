@@ -66,3 +66,43 @@ body {
   animation: pulse-slow 8s infinite ease-in-out;
 }
 
+/* Premium Blueprint Matrix HUD Grid Overlays */
+.hud-grid {
+  position: relative;
+}
+
+.hud-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  z-index: 1;
+}
+
+.hud-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: 160px 160px;
+  background-image: 
+    linear-gradient(to right, rgba(242, 125, 38, 0.02) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(242, 125, 38, 0.02) 1.5px, transparent 1.5px);
+  z-index: 1;
+}
+
+/* Ambient Slow Engine and Neon Dusk Gradients */
+.active-engine-glow {
+  background: radial-gradient(circle at 50% 45%, rgba(255, 87, 34, 0.07) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+.neon-dusk-glow {
+  background: radial-gradient(circle at 90% 15%, rgba(230, 81, 0, 0.05) 0%, rgba(10, 10, 10, 0) 60%),
+              radial-gradient(circle at 10% 85%, rgba(255, 87, 34, 0.04) 0%, rgba(10, 10, 10, 0) 50%);
+}
+
+

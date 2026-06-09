@@ -69,7 +69,7 @@ export default function BlogSection() {
   return (
     <div className="space-y-8 text-left">
       {/* Blog Search & Category Filter Row */}
-      <div className="bg-[#121212] border border-[#333] rounded-none p-5 flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div className="bg-[#121212]/30 backdrop-blur-md border border-[#333] rounded-none p-5 flex flex-col md:flex-row gap-4 items-center justify-between z-10 relative">
         {/* Search bar */}
         <div className="relative w-full md:w-80">
           <Search className="absolute left-3 top-2.5 w-4.5 h-4.5 text-[#666]" />
@@ -110,7 +110,7 @@ export default function BlogSection() {
 
       {/* Main Blog Post Grid */}
       {filteredPosts.length === 0 ? (
-        <div className="bg-[#121212] p-10 text-center rounded-none border border-[#333]">
+        <div className="bg-[#121212]/30 backdrop-blur-md p-10 text-center rounded-none border border-[#333]">
           <p className="text-[#AAAAAA] text-xs italic">No matching blog entries found. Clear filters or adjust search string.</p>
         </div>
       ) : (
@@ -119,7 +119,7 @@ export default function BlogSection() {
             <article
               key={post.id}
               onClick={() => setExpandedPost(post)}
-              className="bg-[#121212] border border-[#333] rounded-none overflow-hidden hover:border-[#F27D26]/60 transition-all hover:translate-y-[-2px] shadow-lg flex flex-col justify-between cursor-pointer group animate-fade-in"
+              className="bg-[#121212]/30 backdrop-blur-md border border-[#333] rounded-none overflow-hidden hover:border-[#F27D26]/60 transition-all hover:translate-y-[-2px] shadow-lg flex flex-col justify-between cursor-pointer group animate-fade-in relative z-10"
             >
               <div>
                 {/* Image header */}
@@ -185,11 +185,11 @@ export default function BlogSection() {
 
       {/* Expanded Article Over-layer Reading modal */}
       {expandedPost && (
-        <div className="fixed inset-0 z-50 flex items-center justify-end bg-[#050505]/95 backdrop-blur-md p-2 sm:p-4">
-          <div className="w-full max-w-3xl bg-[#121212] h-full rounded-none overflow-hidden border border-[#333] flex flex-col shadow-2xl animate-in slide-in-from-right duration-300">
+        <div className="fixed inset-0 z-50 flex items-center justify-end bg-[#050505]/60 backdrop-blur-md p-2 sm:p-4">
+          <div className="w-full max-w-3xl bg-[#121212]/90 backdrop-blur-lg h-full rounded-none overflow-hidden border border-[#333] flex flex-col shadow-2xl animate-in slide-in-from-right duration-300">
             
             {/* Expanded Header tools */}
-            <div className="bg-[#0A0A0A] border-b border-[#333] px-6 py-4 flex items-center justify-between">
+            <div className="bg-[#0A0A0A]/80 border-b border-[#333] px-6 py-4 flex items-center justify-between">
               <span className="text-[10px] uppercase font-mono text-[#F27D26] bg-[#F27D26]/10 px-2.5 py-1 rounded-none border border-[#F27D26]/20 font-bold">
                 Blogging Mode
               </span>
@@ -269,7 +269,7 @@ export default function BlogSection() {
                 ) : (
                   <div className="space-y-3">
                     {expandedPost.comments.map(c => (
-                      <div key={c.id} className="bg-[#121212] border border-[#333] rounded-none p-4 space-y-1.5 animate-in fade-in duration-200">
+                      <div key={c.id} className="bg-[#121212]/50 border border-[#333] rounded-none p-4 space-y-1.5 animate-in fade-in duration-200">
                         <div className="flex justify-between items-center text-[10px] font-mono text-[#AAAAAA]">
                           <span className="font-bold text-white flex items-center gap-1">
                             <User className="w-3.5 h-3.5 text-[#F27D26]" />

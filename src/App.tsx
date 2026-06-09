@@ -5,6 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import AICopilotSimulator from "./components/AICopilotSimulator";
 import BlogSection from "./components/BlogSection";
 import ContactConsole from "./components/ContactConsole";
+import ParticleBackground from "./components/ParticleBackground";
 import { PROJECTS, SKILL_CATEGORIES } from "./data";
 import { 
   Sparkles, 
@@ -63,11 +64,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#F5F5F5] relative selection:bg-[#F27D26] selection:text-black">
+    <div className="min-h-screen bg-black text-[#F5F5F5] relative selection:bg-[#F27D26] selection:text-black hud-grid neon-dusk-glow active-engine-glow overflow-x-hidden">
       
+      {/* Particle background constellation */}
+      <ParticleBackground />
+
       {/* Background ambient glowing spheres for high visual craftsmanship */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-[#F27D26]/3 blur-[120px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute top-2/3 right-1/10 w-[450px] h-[450px] rounded-full bg-[#AAAAAA]/2 blur-[140px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-[#F27D26]/3 blur-[120px] pointer-events-none animate-pulse-slow z-0" />
+      <div className="absolute top-2/3 right-1/10 w-[450px] h-[450px] rounded-full bg-[#AAAAAA]/2 blur-[140px] pointer-events-none animate-pulse-slow z-0" />
 
       {/* Header Sticky Glass Navigation */}
       <Navbar onOpenResume={() => setResumeOpen(true)} activeSection={activeSection} />
@@ -133,7 +137,7 @@ export default function App() {
       {/* 2. ABOUT ME */}
       <section 
         id="about" 
-        className="py-16 md:py-28 px-6 bg-[#0E0E0E]/50 border-b border-[#333]"
+        className="py-16 md:py-28 px-6 bg-[#0A0A0A]/40 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto">
           
@@ -173,19 +177,19 @@ export default function App() {
 
               {/* Stats highlights */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#333] text-center">
-                <div className="bg-[#121212] rounded-none p-3 border border-[#333]">
+                <div className="bg-[#121212]/50 backdrop-blur-md rounded-none p-3 border border-[#333]">
                   <div className="text-lg font-black text-white text-glow">4+ Yrs</div>
                   <div className="text-[8px] uppercase font-mono tracking-wider mt-1 text-[#666]">Real Experience</div>
                 </div>
-                <div className="bg-[#121212] rounded-none p-3 border border-[#333]">
+                <div className="bg-[#121212]/50 backdrop-blur-md rounded-none p-3 border border-[#333]">
                   <div className="text-lg font-black text-[#F27D26] text-glow">3.5x</div>
                   <div className="text-[8px] uppercase font-mono tracking-wider mt-1 text-[#666]">Branch Velocity</div>
                 </div>
-                <div className="bg-[#121212] rounded-none p-3 border border-[#333]">
+                <div className="bg-[#121212]/50 backdrop-blur-md rounded-none p-3 border border-[#333]">
                   <div className="text-lg font-black text-white text-glow">99.8%</div>
                   <div className="text-[8px] uppercase font-mono tracking-wider mt-1 text-[#666]">Bug Stability</div>
                 </div>
-                <div className="bg-[#121212] rounded-none p-3 border border-[#333]">
+                <div className="bg-[#121212]/50 backdrop-blur-md rounded-none p-3 border border-[#333]">
                   <div className="text-lg font-black text-[#AAAAAA] text-glow">100%</div>
                   <div className="text-[8px] uppercase font-mono tracking-wider mt-1 text-[#666]">Type Safe</div>
                 </div>
@@ -199,7 +203,7 @@ export default function App() {
       {/* 3. CORE EXPERTISE & SKILLS */}
       <section 
         id="skills" 
-        className="py-16 md:py-24 px-6 border-b border-[#333]"
+        className="py-16 md:py-24 px-6 bg-[#0A0A0A]/30 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -219,7 +223,7 @@ export default function App() {
             {SKILL_CATEGORIES.map((cat, idx) => (
               <div 
                 key={idx}
-                className="bg-[#121212] border border-[#333] rounded-none p-5 sm:p-6 text-left space-y-4 hover:border-[#F27D26]/25 transition-all"
+                className="bg-[#121212]/50 backdrop-blur-md border border-[#333] rounded-none p-5 sm:p-6 text-left space-y-4 hover:border-[#F27D26]/25 transition-all"
               >
                 <div>
                   <h4 className="font-bold text-[#F5F5F5] uppercase tracking-wider text-sm">
@@ -256,7 +260,7 @@ export default function App() {
       {/* 4. SELECTED WORKS (PROJECTS GALLERY) */}
       <section 
         id="projects" 
-        className="py-16 md:py-24 px-6 bg-[#0E0E0E]/30 border-b border-[#333]"
+        className="py-16 md:py-24 px-6 bg-[#0A0A0A]/40 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -285,7 +289,7 @@ export default function App() {
       {/* 5. WORKSPACE TERMINAL (AI SANDBOX) */}
       <section 
         id="copilot" 
-        className="py-16 md:py-24 px-6 border-b border-[#333]"
+        className="py-16 md:py-24 px-6 bg-[#0A0A0A]/30 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -312,7 +316,7 @@ export default function App() {
       {/* 6. TECHNICAL BLOG */}
       <section 
         id="blog" 
-        className="py-16 md:py-24 px-6 bg-[#0E0E0E]/50 border-b border-[#333]"
+        className="py-16 md:py-24 px-6 bg-[#0A0A0A]/40 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -337,7 +341,7 @@ export default function App() {
       {/* 7. SECURE DIRECT SMTP CONTACT FORM & CONSOLE REGISTRY */}
       <section 
         id="contact" 
-        className="py-16 md:py-24 px-6 border-b border-[#333]"
+        className="py-16 md:py-24 px-6 bg-[#0A0A0A]/30 backdrop-blur-md border-b border-[#333] relative z-10"
       >
         <div className="max-w-5xl mx-auto space-y-12">
           

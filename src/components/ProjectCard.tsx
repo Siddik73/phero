@@ -97,10 +97,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const readabilityIndex = draftContent.length > 50 ? "Grade 10 (Mid Technical)" : "Grade 6 (General Public)";
 
   return (
-    <div className="bg-[#121212] border border-[#333] rounded-none overflow-hidden hover:border-[#F27D26]/40 transition-[border-color] duration-300 shadow-xl flex flex-col xl:flex-row group">
+    <div className="bg-[#121212]/30 backdrop-blur-md border border-[#333] rounded-none overflow-hidden hover:border-[#F27D26]/40 transition-all duration-300 shadow-xl flex flex-col xl:flex-row group relative z-10">
       
       {/* Visual / Gallery panel - Left column for XL */}
-      <div className="w-full xl:w-[45%] bg-[#0A0A0A] flex flex-col justify-between border-b xl:border-b-0 xl:border-r border-[#333]">
+      <div className="w-full xl:w-[45%] bg-black/40 backdrop-blur-md flex flex-col justify-between border-b xl:border-b-0 xl:border-r border-[#333]">
         {/* Main image window */}
         <div className="p-6 pb-2">
           <div className="flex items-center justify-between mb-4">
@@ -163,14 +163,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Narrative Section - Right column */}
-      <div className="flex-1 bg-[#0D0D0D] flex flex-col min-h-[500px]">
+      <div className="flex-1 bg-[#0D0D0D]/40 backdrop-blur-md flex flex-col min-h-[500px]">
         {/* Toggle bar between spec sheet and interactive sandbox simulation! */}
-        <div className="flex border-b border-[#333] bg-[#121212]">
+        <div className="flex border-b border-[#333] bg-[#121212]/50">
           <button
             onClick={() => setActiveTab("sandbox")}
             className={`flex-1 py-4 text-center text-[10px] uppercase font-bold tracking-widest transition-all border-b-2 flex items-center justify-center gap-2 ${
               activeTab === "sandbox"
-                ? "border-[#F27D26] text-white bg-[#0D0D0D]"
+                ? "border-[#F27D26] text-white bg-[#0D0D0D]/50"
                 : "border-transparent text-[#666] hover:text-[#AAAAAA] hover:bg-[#333]/20"
             }`}
           >
@@ -182,7 +182,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             onClick={() => setActiveTab("spec")}
             className={`flex-1 py-4 text-center text-[10px] uppercase font-bold tracking-widest transition-all border-b-2 flex items-center justify-center gap-2 ${
               activeTab === "spec"
-                ? "border-[#F27D26] text-white bg-[#0D0D0D]"
+                ? "border-[#F27D26] text-white bg-[#0D0D0D]/50"
                 : "border-transparent text-[#666] hover:text-[#AAAAAA] hover:bg-[#333]/20"
             }`}
           >

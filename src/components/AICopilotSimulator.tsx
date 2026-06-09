@@ -148,10 +148,10 @@ describe("JWT Bearer Auth validation Middleware", () => {
   };
 
   return (
-    <div className="bg-[#121212] border border-[#333] rounded-none overflow-hidden shadow-2xl flex flex-col h-[520px]">
+    <div className="bg-[#121212]/30 backdrop-blur-md border border-[#333] rounded-none overflow-hidden shadow-2xl flex flex-col h-[520px]">
       
       {/* Console Top Header */}
-      <div className="bg-[#0A0A0A] px-5 py-3.5 border-b border-[#333] flex items-center justify-between">
+      <div className="bg-[#0A0A0A]/50 backdrop-blur-md px-5 py-3.5 border-b border-[#333] flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
             <span className="w-2.5 h-2.5 rounded-none bg-red-500/80 block" />
@@ -175,7 +175,7 @@ describe("JWT Bearer Auth validation Middleware", () => {
       {/* Terminal Display Stream */}
       <div 
         ref={scrollRef}
-        className="flex-1 bg-[#0A0A0A]/70 p-5 md:p-6 font-mono text-xs overflow-y-auto space-y-4"
+        className="flex-1 bg-black/40 backdrop-blur-sm p-5 md:p-6 font-mono text-xs overflow-y-auto space-y-4"
       >
         {terminalHistory.map((history, idx) => (
           <div key={idx} className="space-y-2 animate-in fade-in duration-300">
@@ -217,7 +217,7 @@ describe("JWT Bearer Auth validation Middleware", () => {
       </div>
 
       {/* Micro prompt templates sidebar tray */}
-      <div className="bg-[#121212]/95 border-t border-[#333] p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <div className="bg-[#121212]/50 border-t border-[#333] p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono">
         <div className="flex flex-wrap gap-2">
           <span className="text-[10px] font-bold text-[#666] uppercase tracking-wide flex items-center gap-1 mt-1 font-mono">
             <Sparkles className="w-3 h-3 text-[#F27D26]" />
