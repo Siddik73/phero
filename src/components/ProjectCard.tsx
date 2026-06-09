@@ -85,7 +85,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       setFlowLog(prev => [...prev, `📂 Injecting code repository context into LLM schema...`, `⚙️ Running validation suites on branch 02-hotfix...`]);
       
       setTimeout(() => {
-        setFlowLog(prev => [...prev, `✅ Action Executed Successfully in 118ms! Output drafted.`, `✉️ Recruiter notified at: kaoshik124@gmail.com`]);
+        setFlowLog(prev => [...prev, `✅ Action Executed Successfully in 118ms! Output drafted.`, `✉️ Recruiter notified at: alex@rivera.dev`]);
         setIsFlowRunning(false);
       }, 900);
     }, 800);

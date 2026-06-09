@@ -16,7 +16,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   const handleDownloadTxt = () => {
     let resumeText = `ALEX RIVERA - AI-Driven Full-Stack Web Engineer in 2026
-Email: kaoshik124@gmail.com | Portfolio URL: 2026-portfolio-rivera.app
+Email: alex@rivera.dev | Portfolio URL: 2026-portfolio-rivera.app
 --------------------------------------------------
 
 EXECUTIVE SUMMARY:
@@ -274,9 +274,9 @@ EDUCATION:
                 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-[10px] text-gray-500 font-mono print-text-muted">
                   <div>📍 San Francisco, CA</div>
-                  <div>✉️ kaoshik124@gmail.com</div>
-                  <div>🔗 kaoshik-rivera.dev</div>
-                  <div>🐱 github.com/kaoshik124</div>
+                  <div>✉️ alex@rivera.dev</div>
+                  <div>🔗 alex-rivera.dev</div>
+                  <div>🐱 github.com/alex-rivera</div>
                 </div>
               </div>
 
