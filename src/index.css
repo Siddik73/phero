@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --color-surface-dark: #0A0A0A;
+  --color-surface-deep: #020202;
+  --color-surface-card: #121212;
+  --color-surface-card-hover: #1E1E1E;
+  --color-accent: #F27D26;
+  --color-accent-glow: rgba(242, 125, 38, 0.15);
+  --color-text-primary: #F5F5F5;
+  --color-text-secondary: #AAAAAA;
+  --color-text-muted: #666666;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Base Utility Classes */
+.text-glow {
+  text-shadow: 0 0 20px rgba(242, 125, 38, 0.4);
+}
+
+.box-glow {
+  box-shadow: 0 0 30px var(--color-accent-glow);
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s infinite ease-in-out;
+}
+

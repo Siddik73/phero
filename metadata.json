@@ -1,0 +1,6 @@
+{
+  "name": "AI Full-Stack Developer Portfolio",
+  "description": "2026 Portfolio Website of an AI-Driven Full-Stack Web Engineer featuring project galleries, an interactive blog, downloadable resume builder, and an AI workspace simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
